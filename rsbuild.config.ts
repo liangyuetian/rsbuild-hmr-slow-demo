@@ -27,7 +27,7 @@ export default defineConfig({
           failOnError: false,
           failOnWarning: false,
           cache: true,
-          // threads: 6,
+          threads: 6,
         },
       ]);
     },
