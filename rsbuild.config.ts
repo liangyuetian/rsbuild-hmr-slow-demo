@@ -19,13 +19,18 @@ export default defineConfig({
         // })
       ]
     },
-    // bundlerChain(chain) {
-    //   chain.plugin('eslint-plugin').use(ESLintPlugin, [
-    //     {
-    //       extensions: ['.js', '.ts', '.jsx', 'tsx', '.mjs', '.cjs', '.vue'],
-    //     },
-    //   ]);
-    // },
+    bundlerChain(chain) {
+      chain.plugin('eslint-plugin').use(ESLintPlugin, [
+        {
+          extensions: ['.js', '.ts', '.jsx', 'tsx', '.mjs', '.cjs', '.vue'],
+          lintDirtyModulesOnly: true,
+          // failOnError: false,
+          failOnWarning: false,
+          cache: true,
+          threads: 8,
+        },
+      ]);
+    },
   },
   source: {
     entry: {
