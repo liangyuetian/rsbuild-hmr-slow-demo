@@ -1,0 +1,28 @@
+{
+  "name": "misc-rsbuild",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "export DEBUG=rsbuild && rsbuild dev",
+    "build": "rsbuild build",
+    "preview": "rsbuild preview"
+  },
+  "dependencies": {
+    "vue": "^3.4.19"
+  },
+  "devDependencies": {
+    "@rsbuild/core": "^0.4.3",
+    "@rsbuild/plugin-vue": "^0.4.3",
+    "@types/eslint": "^8.56.2",
+    "@typescript-eslint/eslint-plugin": "^7.0.1",
+    "@typescript-eslint/parser": "^7.0.1",
+    "eslint": "^8.56.0",
+    "eslint-import-resolver-node": "^0.3.9",
+    "eslint-plugin-import": "^2.29.1",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^6.1.1",
+    "eslint-plugin-vue": "^9.21.1",
+    "eslint-webpack-plugin": "^4.0.1",
+    "typescript": "^5.3.0"
+  }
+}
