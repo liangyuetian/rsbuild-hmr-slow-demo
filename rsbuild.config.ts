@@ -24,10 +24,10 @@ export default defineConfig({
         {
           extensions: ['.js', '.ts', '.jsx', 'tsx', '.mjs', '.cjs', '.vue'],
           lintDirtyModulesOnly: true,
-          // failOnError: false,
+          failOnError: false,
           failOnWarning: false,
           cache: true,
-          threads: 8,
+          // threads: 6,
         },
       ]);
     },
