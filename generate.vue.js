@@ -11,6 +11,7 @@ if (!fs.existsSync('./src/pages')) {
   <div>
     批量生成的文件：{{ count }}
   </div>
+  <Button type="primary" @click="count++">数量{{ count }}</Button>   
   <div class="wrapper">
       <HelloWorld msg="You did it122!" />
   </div>
@@ -23,6 +24,7 @@ if (!fs.existsSync('./src/pages')) {
 import { ref } from 'vue'
 import HelloWorld from '../components/HelloWorld.vue'
 import TheWelcome from '../components/TheWelcome.vue'
+import { Button } from 'vant'
 const count = ref(AAA)
 
 </script>

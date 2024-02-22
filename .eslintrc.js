@@ -59,6 +59,7 @@ module.exports = {
     'plugin:@typescript-eslint/recommended',
     'plugin:@typescript-eslint/recommended-requiring-type-checking',
     'plugin:vue/vue3-strongly-recommended',
+    "plugin:oxlint/recommended",
   ],
   // https://cn.eslint.org/docs/rules/
   rules: {
