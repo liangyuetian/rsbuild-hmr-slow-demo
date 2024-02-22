@@ -24,12 +24,13 @@ class RsPackPlugin1 {
                         const length = Object.entries(assets).length
                         return length
                     })
-                    console.log(`第一次 读取 asset 中 ${t1[1]} 条数据, 耗时：${t1[0]}ms`)
+                    console.log(`1. count: ${t1[1]}; time: ${t1[0]}ms`)
                     const t2 = collectTime(() => {
                         const length = Object.entries(assets).length
                         return length
                     })
-                    console.log(`第二次 读取 asset 中 ${t2[1]} 条数据, 耗时：${t2[0]}ms`)
+                    console.log(`2. count: ${t2[1]}; time: ${t2[0]}ms`)
+
                 })
         })
     }
