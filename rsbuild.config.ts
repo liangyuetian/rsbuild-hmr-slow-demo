@@ -15,18 +15,14 @@ export default defineConfig({
 //    htmlPlugin: false,
     rspack: {
       plugins: [
-        // new RsdoctorRspackPlugin({
-        //   // 插件选项
-        // }),
-//        new RsPackPlugin1(),
-        // new ESLintPlugin({
-        //   extensions: ['.js', '.ts', '.jsx', 'tsx', '.mjs', '.cjs', '.vue'],
-        //   lintDirtyModulesOnly: true,
-        //   failOnError: false,
-        //   failOnWarning: false,
-        //   cache: true,
-        //   threads: 8,
-        // }),
+//         new ESLintPlugin({
+//           extensions: ['.js', '.ts', '.jsx', 'tsx', '.mjs', '.cjs', '.vue'],
+//           lintDirtyModulesOnly: true,
+//           failOnError: false,
+//           failOnWarning: false,
+//           cache: true,
+//           threads: 8,
+//         }),
         Components({
           dirs: [],
           resolvers: [VantResolver()],
@@ -41,8 +37,8 @@ export default defineConfig({
            lintDirtyModulesOnly: true,
            failOnError: false,
            failOnWarning: false,
-           cache: true,
-//           threads: 8,
+//           cache: true,
+            threads: 8,
          },
        ]);
      },
