@@ -12,13 +12,13 @@ export default defineConfig({
     pluginVue(),
   ],
   tools: {
-    htmlPlugin: false,
+//    htmlPlugin: false,
     rspack: {
       plugins: [
         // new RsdoctorRspackPlugin({
         //   // 插件选项
         // }),
-        new RsPackPlugin1(),
+//        new RsPackPlugin1(),
         // new ESLintPlugin({
         //   extensions: ['.js', '.ts', '.jsx', 'tsx', '.mjs', '.cjs', '.vue'],
         //   lintDirtyModulesOnly: true,
@@ -34,24 +34,27 @@ export default defineConfig({
         }),
       ]
     },
-    // bundlerChain(chain) {
-    //   chain.plugin('eslint-plugin').use(ESLintPlugin, [
-    //     {
-    //       extensions: ['.js', '.ts', '.jsx', 'tsx', '.mjs', '.cjs', '.vue'],
-    //       lintDirtyModulesOnly: true,
-    //       failOnError: false,
-    //       failOnWarning: false,
-    //       cache: true,
-    //       threads: 8,
-    //     },
-    //   ]);
-    // },
+     bundlerChain(chain) {
+       chain.plugin('eslint-plugin').use(ESLintPlugin, [
+         {
+           extensions: ['.js', '.ts', '.jsx', 'tsx', '.mjs', '.cjs', '.vue'],
+           lintDirtyModulesOnly: true,
+           failOnError: false,
+           failOnWarning: false,
+           cache: true,
+//           threads: 8,
+         },
+       ]);
+     },
   },
   source: {
     entry: {
       index: './src/index.ts',
       ...entry
     },
+  },
+  dev: {
+    progressBar: true,
   },
   performance: {
     chunkSplit: {

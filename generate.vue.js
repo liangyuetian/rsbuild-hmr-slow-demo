@@ -1,6 +1,6 @@
 const fs = require('fs')
 
-const l = Array.from({ length: 200 }, (_, i) => i + 1)
+const l = Array.from({ length: 50 }, (_, i) => i + 1)
 
 if (!fs.existsSync('./src/pages')) {
     fs.mkdirSync('./src/pages')
